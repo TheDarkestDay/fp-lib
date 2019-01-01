@@ -1,0 +1,2 @@
+# fp-lib
+A collection of FP-oriented utility functions (heavily based on Rambda). The purpose of this work is purely educational and this library is not intended to be widely used by someone in production.
