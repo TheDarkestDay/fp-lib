@@ -1,14 +1,9 @@
-export function add(a: any, b?: any): any {
-  const aAsNumber = Number(a);
-  const bAsNumber = Number(b);
+import { curry } from './curry';
 
-  if (arguments.length === 1) {
-    return function(b: any) {
-      const bAsNumber = Number(b);
+function _add(a: any, b: any): number {
+  return Number(a) + Number(b);
+}
 
-      return aAsNumber + bAsNumber;
-    }
-  }
+const add = curry(_add);
 
-  return aAsNumber + bAsNumber;
-}  
+export { add };
