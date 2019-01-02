@@ -1,8 +1,12 @@
 export { add } from './add';
 export { all } from './all';
 export { allPass } from './all-pass';
+export { always } from './always';
 export { adjust } from './adjust';
 export { append } from './append';
 export { apply } from './apply';
+export { applySpec } from './apply-spec';
 export { curry } from './curry';
+export { curryN } from './curry-n';
 export { flip } from './flip';
+export { prop } from './prop';
