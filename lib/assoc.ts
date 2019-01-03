@@ -1,11 +1,8 @@
+import { copyShallow } from './internal';
 import { curry } from './curry';
 
 function _assoc(targetKey: string, value: any, obj: any): any {
-  const result: any = {};
-
-  Object.keys(obj).forEach((key) => {
-    result[key] = obj[key];
-  });
+  const result = copyShallow(obj);
 
   result[targetKey] = value;
   
