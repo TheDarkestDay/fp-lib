@@ -6,6 +6,7 @@ export { adjust } from './adjust';
 export { append } from './append';
 export { apply } from './apply';
 export { applySpec } from './apply-spec';
+export { assoc } from './assoc';
 export { curry } from './curry';
 export { curryN } from './curry-n';
 export { flip } from './flip';
