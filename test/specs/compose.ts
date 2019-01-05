@@ -1,6 +1,6 @@
 import * as assert from 'assert';
 
-import { compose, map, multiply } from '../lib';
+import { compose, map, multiply } from '../../lib';
 
 describe('compose', function() {
   it('is a variadic function', function() {

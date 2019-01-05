@@ -1,4 +1,4 @@
-import { add, always, applySpec, prop } from '../lib';
+import { add, always, applySpec, prop } from '../../lib';
 
 describe('applySpec', function () {
   const inc = function (x: number) { return x + 1 };

@@ -1,4 +1,4 @@
-import { append } from '../lib';
+import { append } from '../../lib';
 
 describe('append', function() {
   it('adds the element to the end of the list', function() {

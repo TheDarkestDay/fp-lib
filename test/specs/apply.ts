@@ -1,4 +1,4 @@
-import { apply } from '../lib';
+import { apply } from '../../lib';
 
 describe('apply', function() {
   it('applies function to argument list', function() {

@@ -1,4 +1,4 @@
-import { curryN } from '../lib';
+import { curryN } from '../../lib';
 
 describe('curryN', function() {
   function source(a: any, b: any, c: any, d: any) {

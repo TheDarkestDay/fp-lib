@@ -1,4 +1,4 @@
-import { assoc } from '../lib';
+import { assoc } from '../../lib';
 
 describe('assoc', function() {
   it('makes a shallow clone of an object, overriding only the specified property', function() {

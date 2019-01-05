@@ -1,4 +1,4 @@
-import { always } from '../lib';
+import { always } from '../../lib';
 
 describe('always', function() {
   it('returns a function that returns the object initially supplied', function() {

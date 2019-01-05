@@ -1,4 +1,4 @@
-import { allPass } from '../lib';
+import { allPass } from '../../lib';
 
 describe('allPass', function() {
   const odd = function(n: any) { return n % 2 !== 0; };

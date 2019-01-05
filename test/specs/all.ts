@@ -1,4 +1,4 @@
-import { all } from '../lib';
+import { all } from '../../lib';
 
 describe('all', function () {
   var even = function (n: any) { return n % 2 === 0; };

@@ -1,4 +1,4 @@
-import { flip } from '../lib';
+import { flip } from '../../lib';
 
 describe('flip', function() {
   it('returns a function which inverts the first two arguments to the supplied function', function() {

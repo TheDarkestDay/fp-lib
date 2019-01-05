@@ -1,6 +1,6 @@
 import * as assert from 'assert';
 
-import { last } from '../lib';
+import { last } from '../../lib';
 
 describe('last', function() {
 

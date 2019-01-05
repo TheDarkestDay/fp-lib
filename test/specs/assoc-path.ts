@@ -1,4 +1,4 @@
-import { assocPath } from '../lib';
+import { assocPath } from '../../lib';
 
 describe('assocPath', function() {
   it('makes a shallow clone of an object, overriding only what is necessary for the path', function() {

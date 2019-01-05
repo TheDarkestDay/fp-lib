@@ -1,4 +1,4 @@
-import { curry } from '../lib';
+import { curry } from '../../lib';
 
 describe('curry', function() {
   it('curries a single value', function() {

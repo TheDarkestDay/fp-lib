@@ -1,4 +1,4 @@
-import { prop } from '../lib';
+import { prop } from '../../lib';
 
 describe('prop', function() {
   const fred = {name: 'Fred', age: 23};

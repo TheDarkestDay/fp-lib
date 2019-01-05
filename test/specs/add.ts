@@ -1,6 +1,6 @@
 import * as jsv from 'jsverify';
 
-import { add } from '../lib';
+import { add } from '../../lib';
 
 describe('add', function() {
   it('adds together two numbers', function() {
