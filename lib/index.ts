@@ -15,6 +15,7 @@ export { construct } from './construct';
 export { converge } from './converge';
 export { curry } from './curry';
 export { curryN } from './curry-n';
+export { defaultTo } from './default-to';
 export { differenceWith } from './difference-with';
 export { equals } from './equals';
 export { flip } from './flip';
