@@ -11,6 +11,7 @@ export { assocPath } from './assoc-path';
 export { compose } from './compose';
 export { concat } from './concat';
 export { cond } from './cond';
+export { construct } from './construct';
 export { converge } from './converge';
 export { curry } from './curry';
 export { curryN } from './curry-n';
