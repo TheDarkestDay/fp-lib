@@ -1,3 +1,9 @@
 export function copyShallow(obj: any): any {
-  return Object.assign({}, obj);
+  const result: any = {};
+
+  for (const key in obj) {
+    result[key] = obj[key];
+  }
+
+  return result;
 }

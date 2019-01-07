@@ -17,6 +17,7 @@ export { curry } from './curry';
 export { curryN } from './curry-n';
 export { defaultTo } from './default-to';
 export { differenceWith } from './difference-with';
+export { dissoc } from './dissoc';
 export { equals } from './equals';
 export { flip } from './flip';
 export { last } from './last';
