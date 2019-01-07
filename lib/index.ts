@@ -21,6 +21,7 @@ export { dissoc } from './dissoc';
 export { dissocPath } from './dissoc-path';
 export { drop } from './drop';
 export { dropLast } from './drop-last';
+export { dropWhile } from './drop-while';
 export { equals } from './equals';
 export { flip } from './flip';
 export { last } from './last';
