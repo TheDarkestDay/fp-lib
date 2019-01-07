@@ -20,6 +20,7 @@ export { differenceWith } from './difference-with';
 export { dissoc } from './dissoc';
 export { dissocPath } from './dissoc-path';
 export { drop } from './drop';
+export { dropLast } from './drop-last';
 export { equals } from './equals';
 export { flip } from './flip';
 export { last } from './last';
