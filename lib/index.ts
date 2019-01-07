@@ -18,6 +18,7 @@ export { curryN } from './curry-n';
 export { defaultTo } from './default-to';
 export { differenceWith } from './difference-with';
 export { dissoc } from './dissoc';
+export { dissocPath } from './dissoc-path';
 export { equals } from './equals';
 export { flip } from './flip';
 export { last } from './last';
