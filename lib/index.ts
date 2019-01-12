@@ -26,6 +26,7 @@ export { either } from './either';
 export { empty } from './empty';
 export { endsWith } from './ends-with';
 export { eqBy } from './eq-by';
+export { eqProps } from './eq-props';
 export { equals } from './equals';
 export { evolve } from './evolve';
 export { flip } from './flip';
