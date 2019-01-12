@@ -22,6 +22,7 @@ export { dissocPath } from './dissoc-path';
 export { drop } from './drop';
 export { dropLast } from './drop-last';
 export { dropWhile } from './drop-while';
+export { either } from './either';
 export { equals } from './equals';
 export { evolve } from './evolve';
 export { flip } from './flip';
