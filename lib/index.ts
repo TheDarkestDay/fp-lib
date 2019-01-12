@@ -24,6 +24,7 @@ export { dropLast } from './drop-last';
 export { dropWhile } from './drop-while';
 export { either } from './either';
 export { empty } from './empty';
+export { endsWith } from './ends-with';
 export { equals } from './equals';
 export { evolve } from './evolve';
 export { flip } from './flip';
