@@ -23,6 +23,7 @@ export { drop } from './drop';
 export { dropLast } from './drop-last';
 export { dropWhile } from './drop-while';
 export { either } from './either';
+export { empty } from './empty';
 export { equals } from './equals';
 export { evolve } from './evolve';
 export { flip } from './flip';
