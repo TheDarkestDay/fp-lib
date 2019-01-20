@@ -241,16 +241,16 @@ describe('equals', function () {
   //   eq(equals(a, b), true);
   // });
 
-  // it('compares Set objects by value', function () {
-  //   eq(equals(new Set([]), new Set([])), true);
-  //   eq(equals(new Set([]), new Set([1])), false);
-  //   eq(equals(new Set([1]), new Set([])), false);
-  //   eq(equals(new Set([1, 2]), new Set([2, 1])), true);
-  //   eq(equals(new Set([1, new Set([2, new Set([3])])]), new Set([1, new Set([2, new Set([3])])])), true);
-  //   eq(equals(new Set([1, new Set([2, new Set([3])])]), new Set([1, new Set([2, new Set([4])])])), false);
-  //   eq(equals(new Set([[1, 2, 3], [4, 5, 6]]), new Set([[1, 2, 3], [4, 5, 6]])), true);
-  //   eq(equals(new Set([[1, 2, 3], [4, 5, 6]]), new Set([[1, 2, 3], [7, 8, 9]])), false);
-  // });
+  it('compares Set objects by value', function () {
+    eq(equals(new Set([]), new Set([])), true);
+    eq(equals(new Set([]), new Set([1])), false);
+    eq(equals(new Set([1]), new Set([])), false);
+    eq(equals(new Set([1, 2]), new Set([2, 1])), true);
+    eq(equals(new Set([1, new Set([2, new Set([3])])]), new Set([1, new Set([2, new Set([3])])])), true);
+    eq(equals(new Set([1, new Set([2, new Set([3])])]), new Set([1, new Set([2, new Set([4])])])), false);
+    eq(equals(new Set([[1, 2, 3], [4, 5, 6]]), new Set([[1, 2, 3], [4, 5, 6]])), true);
+    eq(equals(new Set([[1, 2, 3], [4, 5, 6]]), new Set([[1, 2, 3], [7, 8, 9]])), false);
+  });
 
   // it('dispatches to `equals` method recursively in Set', function () {
   //   const a = new Set();

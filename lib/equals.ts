@@ -85,6 +85,18 @@ function _equals(a: any, b: any): boolean {
       });
     }
 
+    // Case: Set
+    if (a instanceof Set && b instanceof Set) {
+      const aValues = [...a.values()];
+      const bValues = [...b.values()];
+
+      const allValuesAreSameCheck = aValues.every((aValue) => {
+        return bValues.some((bValue) => equals(aValue, bValue));
+      });
+
+      return aValues.length === bValues.length && allValuesAreSameCheck;
+    }
+
     return allPropsAreEqualCheck;
   }
 
