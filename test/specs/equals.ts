@@ -103,20 +103,19 @@ describe('equals', function () {
     eq(equals(new Error('XXX'), new TypeError('YYY')), false);
   });
 
-  // TODO: Need to find out how to handle regexes
-  // it('handles regex', function () {
-  //   eq(equals(/\s/, /\s/), true);
-  //   eq(equals(/\s/, /\d/), false);
-  //   eq(equals(/a/gi, /a/ig), true);
-  //   eq(equals(/a/mgi, /a/img), true);
-  //   eq(equals(/a/gi, /a/i), false);
+  it('handles regex', function () {
+    eq(equals(/\s/, /\s/), true);
+    eq(equals(/\s/, /\d/), false);
+    eq(equals(/a/gi, /a/ig), true);
+    eq(equals(/a/mgi, /a/img), true);
+    eq(equals(/a/gi, /a/i), false);
 
-  //   eq(equals(/\s/y, /\s/y), true);
-  //   eq(equals(/a/mygi, /a/imgy), true);
+    eq(equals(/\s/y, /\s/y), true);
+    eq(equals(/a/mygi, /a/imgy), true);
 
-  //   eq(equals(/\s/u, /\s/u), true);
-  //   eq(equals(/a/mugi, /a/imgu), true);
-  // });
+    eq(equals(/\s/u, /\s/u), true);
+    eq(equals(/a/mugi, /a/imgu), true);
+  });
 
   it('handles lists', function () {
     const listA = [1, 2, 3];
@@ -179,9 +178,9 @@ describe('equals', function () {
     const n2: any = new Number(0);
     n2.x = 0;
 
-    // const r1: any = /(?:)/;
-    // const r2: any = /(?:)/;
-    // r2.x = 0;
+    const r1: any = /(?:)/;
+    const r2: any = /(?:)/;
+    r2.x = 0;
 
     const s1: any = new String('');
     const s2: any = new String('');
@@ -191,7 +190,7 @@ describe('equals', function () {
     eq(equals(b1, b2), false);
     eq(equals(d1, d2), false);
     eq(equals(n1, n2), false);
-    // eq(equals(r1, r2), false);
+    eq(equals(r1, r2), false);
     eq(equals(s1, s2), false);
   });
 

@@ -49,6 +49,22 @@ function _equals(a: any, b: any): boolean {
       return a === b;
     }
 
+    // Case: RegExp
+    if (a instanceof RegExp && b instanceof RegExp) {
+      const aAsString = a.toString();
+      const bAsString = b.toString();
+      const aFlagsDelimIndex = aAsString.lastIndexOf('/');
+      const bFlagsDelimIndex = bAsString.lastIndexOf('/');
+      const aWithoutFlags = aAsString.slice(0, aFlagsDelimIndex);
+      const bWithoutFlags = bAsString.slice(0, bFlagsDelimIndex);
+
+      return aWithoutFlags === bWithoutFlags &&
+        a.global === b.global &&
+        a.multiline === b.multiline &&
+        a.sticky === b.sticky &&
+        a.unicode === b.unicode;
+    }
+
     return allPropsAreEqualCheck;
   }
 
