@@ -65,6 +65,26 @@ function _equals(a: any, b: any): boolean {
         a.unicode === b.unicode;
     }
 
+    // Case: Map
+    if (a instanceof Map && b instanceof Map) {
+      const aMapKeys = [...a.keys()];
+      const bMapKeys = [...b.keys()];
+
+      if (aMapKeys.length !== bMapKeys.length) {
+        return false;
+      }
+
+      return aMapKeys.every((aMapKey) => {
+        const sameKeyInB = bMapKeys.find((bMapKey) => equals(aMapKey, bMapKey));
+
+        if (!sameKeyInB) {
+          return false;
+        }
+
+        return equals(a.get(aMapKey), b.get(sameKeyInB));
+      });
+    }
+
     return allPropsAreEqualCheck;
   }
 

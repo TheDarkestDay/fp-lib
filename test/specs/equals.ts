@@ -216,20 +216,19 @@ describe('equals', function () {
     eq(equals(p, q), false);
   });
 
-  // // TODO: Need to resolve typing issue with Map
-  // // it('compares Map objects by value', function () {
-  // //   eq(equals(new Map([]), new Map([])), true);
-  // //   eq(equals(new Map([]), new Map([[1, 'a']])), false);
-  // //   eq(equals(new Map([[1, 'a']]), new Map([])), false);
-  // //   eq(equals(new Map([[1, 'a']]), new Map([[1, 'a']])), true);
-  // //   eq(equals(new Map([[1, 'a'], [2, 'b']]), new Map([[2, 'b'], [1, 'a']])), true);
-  // //   eq(equals(new Map([[1, 'a']]), new Map([[2, 'a']])), false);
-  // //   eq(equals(new Map([[1, 'a']]), new Map([[1, 'b']])), false);
-  // //   eq(equals(new Map([[1, 'a'], [2, new Map([[3, 'c']])]]), new Map([[1, 'a'], [2, new Map([[3, 'c']])]])), true);
-  // //   eq(equals(new Map<any, any>([[1, 'a'], [2, new Map([[3, 'c']])]]), new Map([[1, 'a'], [2, new Map([[3, 'd']])]])), false);
-  // //   eq(equals(new Map([[[1, 2, 3], [4, 5, 6]]]), new Map([[[1, 2, 3], [4, 5, 6]]])), true);
-  // //   eq(equals(new Map([[[1, 2, 3], [4, 5, 6]]]), new Map([[[1, 2, 3], [7, 8, 9]]])), false);
-  // // });
+  it('compares Map objects by value', function () {
+    eq(equals(new Map([]), new Map([])), true);
+    eq(equals(new Map([]), new Map([[1, 'a']])), false);
+    eq(equals(new Map([[1, 'a']]), new Map([])), false);
+    eq(equals(new Map([[1, 'a']]), new Map([[1, 'a']])), true);
+    eq(equals(new Map([[1, 'a'], [2, 'b']]), new Map([[2, 'b'], [1, 'a']])), true);
+    eq(equals(new Map([[1, 'a']]), new Map([[2, 'a']])), false);
+    eq(equals(new Map([[1, 'a']]), new Map([[1, 'b']])), false);
+    eq(equals(new Map<number, any>([[1, 'a'], [2, new Map([[3, 'c']])]]), new Map<number, any>([[1, 'a'], [2, new Map([[3, 'c']])]])), true);
+    eq(equals(new Map<any, any>([[1, 'a'], [2, new Map([[3, 'c']])]]), new Map<number, any>([[1, 'a'], [2, new Map([[3, 'd']])]])), false);
+    eq(equals(new Map([[[1, 2, 3], [4, 5, 6]]]), new Map([[[1, 2, 3], [4, 5, 6]]])), true);
+    eq(equals(new Map([[[1, 2, 3], [4, 5, 6]]]), new Map([[[1, 2, 3], [7, 8, 9]]])), false);
+  });
 
   // it('dispatches to `equals` method recursively in Map', function () {
   //   const a = new Map();
