@@ -30,6 +30,7 @@ export { eqProps } from './eq-props';
 export { equals } from './equals';
 export { evolve } from './evolve';
 export { flip } from './flip';
+export { fromPairs } from './from-pairs';
 export { identity } from './identity';
 export { last } from './last';
 export { map } from './map';
