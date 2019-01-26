@@ -29,6 +29,8 @@ export { eqBy } from './eq-by';
 export { eqProps } from './eq-props';
 export { equals } from './equals';
 export { evolve } from './evolve';
+export { filter } from './filter';
+export { find } from './find';
 export { flip } from './flip';
 export { fromPairs } from './from-pairs';
 export { identity } from './identity';
