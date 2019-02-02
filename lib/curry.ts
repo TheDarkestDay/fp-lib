@@ -1,4 +1,4 @@
-export function curry(f: Function): Function {
+export function curry(f: Function): (...args: any[]) => any {
   const curriedWrapper = function (...rest: any[]) {
     if (rest.length >= f.length) {
       return f.call(this, ...rest);

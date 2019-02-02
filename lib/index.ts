@@ -1,4 +1,5 @@
 export { add } from './add';
+export { addIndex } from './add-index';
 export { all } from './all';
 export { allPass } from './all-pass';
 export { always } from './always';
@@ -35,6 +36,7 @@ export { flip } from './flip';
 export { fromPairs } from './from-pairs';
 export { flatten } from './flatten';
 export { identity } from './identity';
+export { gt } from './gt';
 export { last } from './last';
 export { map } from './map';
 export { multiply } from './multiply';
