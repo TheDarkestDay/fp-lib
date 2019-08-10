@@ -9,6 +9,7 @@ export { apply } from './apply';
 export { applySpec } from './apply-spec';
 export { assoc } from './assoc';
 export { assocPath } from './assoc-path';
+export { cloneDeep } from './clone-deep';
 export { compose } from './compose';
 export { concat } from './concat';
 export { cond } from './cond';
