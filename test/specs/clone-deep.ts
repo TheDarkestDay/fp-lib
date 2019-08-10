@@ -50,4 +50,52 @@ describe('cloneDeep', () => {
     expect(clonedArr).not.toBe(arr);
     expect(clonedArr).toEqual(arr);
   });
+
+  it('should clone Number objects', () => {
+
+  });
+
+  it('should clone Boolean objects', () => {
+
+  });
+
+  it('should clone String objects', () => {
+
+  });
+
+  it('should clone Date objects', () => {
+
+  });
+
+  it('should clone RegExp objects', () => {
+
+  });
+
+  it('should clone Map objects', () => {
+
+  });
+
+  it('should clone Set objects', () => {
+
+  });
+
+  it('should clone WeakMap objects', () => {
+
+  });
+
+  it('should clone WeakSet objects', () => {
+
+  });
+
+  it('should clone typed arrays', () => {
+
+  });
+
+  it('should clone Arguments objects', () => {
+
+  });
+
+  it('should handle cyclic references', () => {
+
+  });
 });
