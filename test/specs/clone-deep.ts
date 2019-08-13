@@ -102,19 +102,40 @@ describe('cloneDeep', () => {
   });
 
   it('should clone Map objects', () => {
+    const map = new Map<string, any>();
+    map.set('A', {id: 1, value: 'a'});
+    map.set('B', {id: 2, value: 'B'});
 
+    const clonedMap = cloneDeep(map);
+
+    expect(clonedMap).not.toBe(map);
+    expect(clonedMap).toEqual(map);
   });
 
   it('should clone Set objects', () => {
+    const entries = [
+      {
+        id: 1,
+        value: 'A'
+      },
+      {
+        id: 2,
+        value: 'B'
+      }
+    ];
+    const set = new Set(entries);
 
-  });
+    const clonedSet = cloneDeep(set);
 
-  it('should clone WeakMap objects', () => {
+    expect(clonedSet).not.toBe(set);
+    expect(clonedSet).toEqual(set);
+    
+    [...clonedSet.values()].forEach((clonedEntry: any) => {
+      const originalEntry = entries.find((entry) => entry.id === clonedEntry.id);
 
-  });
-
-  it('should clone WeakSet objects', () => {
-
+      expect(originalEntry).not.toBe(clonedEntry);
+      expect(originalEntry).toEqual(clonedEntry);
+    });
   });
 
   it('should clone typed arrays', () => {

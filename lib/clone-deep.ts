@@ -12,6 +12,25 @@ function _clonePrimitiveWrapper(obj: Number | String | Boolean): Number | String
   return new Boolean(value);
 }
 
+function _cloneMap(obj: Map<any, any>, alreadyClonedRefs: Map<any, any>): Map<any, any> {
+  const newMap = new Map();
+
+  [...obj.entries()].forEach(([key, value]) => {
+    const clonedKey = _clone(key, alreadyClonedRefs);
+    const clonedValue = _clone(value, alreadyClonedRefs);
+
+    newMap.set(clonedKey, clonedValue);
+  });
+
+  return newMap;
+}
+
+function _cloneSet(obj: Set<any>, alreadyClonedRefs: Map<any, any>): Set<any> {
+  const clonedSetContent = [...obj.values()].map((setItem) => _clone(setItem, alreadyClonedRefs));
+  
+  return new Set(clonedSetContent);
+}
+
 function _cloneRegExps(re: RegExp): RegExp {
   return new RegExp(re.source, re.flags);
 }
@@ -31,12 +50,24 @@ function _cloneArray(arr: any[], alreadyClonedRefs: Map<any, any>): any[] {
 }
 
 function _clone(obj: any, alreadyClonedRefs: Map<any, any>): any {
+  if (typeof obj !== 'object') {
+    return obj;
+  }
+
   const result: any = Object.create(Object.getPrototypeOf(obj));
 
   alreadyClonedRefs.set(obj, result);
 
   if (obj instanceof Number || obj instanceof Boolean || obj instanceof String) {
     return _clonePrimitiveWrapper(obj);
+  }
+
+  if (obj instanceof Set) {
+    return _cloneSet(obj, alreadyClonedRefs);
+  }
+
+  if (obj instanceof Map) {
+    return _cloneMap(obj, alreadyClonedRefs);
   }
 
   if (obj instanceof Date) {
